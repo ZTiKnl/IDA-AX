@@ -80,5 +80,5 @@ def journal_entry(cmdr, is_beta, system, station, entry, state):
             statustext = 'S:' + str(this.kts.get()) + ' | C:' + str(this.ktc.get()) + ' | B:' + str(this.ktb.get()) + ' | M:' + str(this.ktm.get()) + ' | H:' + str(this.kth.get())
             this.status['text'] = statustext
             sys.stderr.write("IDA AX tally:\n")
-            sys.stderr.write("str(statustext) + "\n")
+            sys.stderr.write(str(statustext) + "\n")
             sys.stderr.write("-------------\n")
