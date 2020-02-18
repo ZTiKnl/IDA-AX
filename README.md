@@ -8,7 +8,7 @@ Version 0.10
 Count each type of Thargoid kill, Scout, Cyclops, Basilisk, Medusa & Hydra.  
 The number is displayed in the EDMC main window.  
 
-There is an extra row in the main window of EDMC, labeled IDA-AX with alongside the tally: S:0 | C:0 | B:0 | M:0 | H:0  
+There is an extra row in the main window of EDMC, labeled `IDA-AX` with the counts: `S:0 | C:0 | B:0 | M:0 | H:0`  
   S = Scout  
   C = Cyclops  
   B = Basilisk  
