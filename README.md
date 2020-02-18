@@ -29,4 +29,4 @@ There is no license on this code, feel free to use it as you see fit.
 Patches are always welcome.  
 
 ## Thanks
-VVaves, TOPBLAZER85, CrazyGolm & Chuckination
+VVaves, TOPBLAZER85, CrazyGolm & Chuckination, devnull, Thrilling Eve
