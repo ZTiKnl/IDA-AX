@@ -8,6 +8,13 @@ Version 0.10
 Count each type of Thargoid kill, Scout, Cyclops, Basilisk, Medusa & Hydra.  
 The number is displayed in the EDMC main window.  
 
+There is an extra row in the main window of EDMC, labeled IDA-AX with alongside the tally: S:0 | C:0 | B:0 | M:0 | H:0  
+  S = Scout  
+  C = Cyclops  
+  B = Basilisk  
+  M = Medusa  
+  H = Hydra  
+
 It displays the killcounts for as long as EDMC is open, all stats are deleted on restart of EDMC.  
 It is NOT affected by game client closure/crash, it will remember the stats as long as EDMC remains open.  
 In case of an EDMC crash, you can always read back the killcounts i the log file `%TMP%\EDMarketConnector.log`  
@@ -15,9 +22,7 @@ In case of an EDMC crash, you can always read back the killcounts i the log file
 ## How to use:  
 1. Clone the repo to the EDMC plugin folder, or download and unzip to the EDMC plugin folder  
    (default: `c:\Users\%USERNAME%\AppData\Local\EDMarketConnector\plugins`)  
-3. Start up EDMC  
-
-There is an extra row in the main window of EDMC, labeled IDA-AX.  
+2. Start up EDMC  
 
 ## Disclaimer
 This plugin is still under construction, ~~bugs~~ new features WILL appear unexpectedly.  
