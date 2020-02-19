@@ -2,7 +2,7 @@
 An EDMC plugin that displays AX kill count
 
 ## Version  
-Version 0.10  
+Version 0.20  
 
 ## What it does:  
 Count each type of Thargoid kill, Scout, Cyclops, Basilisk, Medusa & Hydra.  
@@ -15,9 +15,11 @@ There is an extra row in the main window of EDMC, labeled `IDA-AX` with the coun
   M = Medusa  
   H = Hydra  
 
-It displays the killcounts for as long as EDMC is open, all stats are deleted on restart of EDMC.  
+It displays the killcounts ~~for as long as EDMC is open, all stats are deleted on restart of EDMC~~.  
 It is NOT affected by game client closure/crash, it will remember the stats as long as EDMC remains open.  
-In case of an EDMC crash, you can always read back the killcounts in the log file `%TMP%\EDMarketConnector.log` (this file is cleared on EDMC startup)  
+If you place a checkmark in the settings tab, it will remember counts also on EDMC restart.  
+*In case of an EDMC crash, you can always read back the killcounts in the log file `%TMP%\EDMarketConnector.log` (this file is cleared on EDMC startup)*  
+
 ## How to use:  
 1. Clone the repo to the EDMC plugin folder, or download and unzip to the EDMC plugin folder  
    (default: `c:\Users\%USERNAME%\AppData\Local\EDMarketConnector\plugins`)  
