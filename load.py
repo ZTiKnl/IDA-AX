@@ -13,11 +13,14 @@ def plugin_start(plugin_dir):
     Load this plugin into EDMC
     """
     print "IDA-AX loaded! My plugin folder is {}".format(plugin_dir.encode("utf-8"))
-    config.set('killtallys', 0)
-    config.set('killtallyc', 0)
-    config.set('killtallyb', 0)
-    config.set('killtallym', 0)
-    config.set('killtallyh', 0)
+    this.rememberkillcount = tk.IntVar(value=config.getint("RKC"))
+    if this.rememberkillcount.get() == 1 :
+        sys.stderr.write("Resetting IDA AX tally\n")
+        config.set('killtallys', 0)
+        config.set('killtallyc', 0)
+        config.set('killtallyb', 0)
+        config.set('killtallym', 0)
+        config.set('killtallyh', 0)
     return "IDA-AX"
 
 def plugin_stop():
@@ -25,6 +28,33 @@ def plugin_stop():
     EDMC is closing
     """
     print "Closing down"
+
+
+def plugin_prefs(parent, cmdr, is_beta):
+    """
+    Return a TK Frame for adding to the EDMC settings dialog.
+    """
+    this.rememberkillcount = tk.IntVar(value=config.getint("RKC"))
+
+    frame = nb.Frame(parent)
+
+    plugin_label = nb.Label(frame, text="IDA-BGS AX plugin v0.20")
+    plugin_label.grid(padx=10, row=0, column=0, columnspan=2, sticky=tk.W)
+
+    empty_label = nb.Label(frame, text="")
+    empty_label.grid(padx=10, row=1, column=0, columnspan=2, sticky=tk.W)
+
+    remember_entry = nb.Checkbutton(frame, text=_('Remember kill count on EDMC restart'), variable=this.rememberkillcount)
+    remember_entry.grid(padx=10, row=5, column=0, columnspan=2, sticky=tk.EW)
+
+    return frame
+
+def prefs_changed(cmdr, is_beta):
+    """
+    Save settings.
+    """
+    config.set('RKC', this.rememberkillcount.get())
+
 
 def plugin_app(parent):
     """
