@@ -30,4 +30,4 @@ This plugin is still under construction, ~~bugs~~ new features WILL appear unexp
 Patches are always welcome.  
 
 ## Thanks
-VVaves, TOPBLAZER85, CrazyGolm & Chuckination, devnull, Thrilling Eve
+VVaves, TOPBLAZER85, CrazyGolm & Chuckination, devnull, Plusran  
