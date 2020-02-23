@@ -14,7 +14,7 @@ def plugin_start(plugin_dir):
     """
     print "IDA-AX loaded! My plugin folder is {}".format(plugin_dir.encode("utf-8"))
     this.rememberkillcount = tk.IntVar(value=config.getint("RKC"))
-    if this.rememberkillcount.get() == 1 :
+    if this.rememberkillcount.get() == 0 :
         sys.stderr.write("Resetting IDA AX tally\n")
         config.set('killtallys', 0)
         config.set('killtallyc', 0)
@@ -38,7 +38,7 @@ def plugin_prefs(parent, cmdr, is_beta):
 
     frame = nb.Frame(parent)
 
-    plugin_label = nb.Label(frame, text="IDA-BGS AX plugin v0.20")
+    plugin_label = nb.Label(frame, text="IDA-BGS AX plugin v0.21")
     plugin_label.grid(padx=10, row=0, column=0, columnspan=2, sticky=tk.W)
 
     empty_label = nb.Label(frame, text="")
