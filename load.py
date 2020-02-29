@@ -3,6 +3,7 @@ import json
 import requests
 import threading
 import Tkinter as tk
+from ttkHyperlinkLabel import HyperlinkLabel
 import myNotebook as nb
 from config import config
 
@@ -38,8 +39,10 @@ def plugin_prefs(parent, cmdr, is_beta):
 
     frame = nb.Frame(parent)
 
-    plugin_label = nb.Label(frame, text="IDA-BGS AX plugin v0.21")
-    plugin_label.grid(padx=10, row=0, column=0, columnspan=2, sticky=tk.W)
+    plugin_label = nb.Label(frame, text="IDA-BGS AX plugin v0.22")
+    plugin_label.grid(padx=10, row=0, column=0, sticky=tk.W)
+
+    HyperlinkLabel(frame, text='Visit website', background=nb.Label().cget('background'), url='https://github.com/ZTiKnl/IDA-AX', underline=True).grid(padx=10, row=0, column=1, sticky=tk.W)
 
     empty_label = nb.Label(frame, text="")
     empty_label.grid(padx=10, row=1, column=0, columnspan=2, sticky=tk.W)
