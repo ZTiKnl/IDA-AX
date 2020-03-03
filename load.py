@@ -2,18 +2,24 @@ import sys
 import json
 import requests
 import threading
-import Tkinter as tk
+try:
+    import Tkinter as tk # this is for python2
+except:
+    import tkinter as tk # this is for python3
 from ttkHyperlinkLabel import HyperlinkLabel
 import myNotebook as nb
 from config import config
 
 this = sys.modules[__name__]
 
+def plugin_start3(plugin_dir):
+    return plugin_start(plugin_dir)
+
 def plugin_start(plugin_dir):
     """
     Load this plugin into EDMC
     """
-    print "IDA-AX loaded! My plugin folder is {}".format(plugin_dir.encode("utf-8"))
+    print("IDA-AX loaded! My plugin folder is " + format(plugin_dir))
     this.rememberkillcount = tk.IntVar(value=config.getint("RKC"))
     if this.rememberkillcount.get() == 0 :
         sys.stderr.write("Resetting IDA AX tally\n")
@@ -28,7 +34,7 @@ def plugin_stop():
     """
     EDMC is closing
     """
-    print "Closing down"
+    print("Closing down")
 
 
 def plugin_prefs(parent, cmdr, is_beta):
@@ -39,7 +45,7 @@ def plugin_prefs(parent, cmdr, is_beta):
 
     frame = nb.Frame(parent)
 
-    plugin_label = nb.Label(frame, text="IDA-BGS AX plugin v0.22")
+    plugin_label = nb.Label(frame, text="IDA-BGS AX plugin v0.30")
     plugin_label.grid(padx=10, row=0, column=0, sticky=tk.W)
 
     HyperlinkLabel(frame, text='Visit website', background=nb.Label().cget('background'), url='https://github.com/ZTiKnl/IDA-AX', underline=True).grid(padx=10, row=0, column=1, sticky=tk.W)
