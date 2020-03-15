@@ -2,7 +2,7 @@
 An EDMC plugin that displays AX kill count
 
 ## Version  
-Version 0.30  
+Version 0.31  
 
 ## What it does:  
 Count each type of Thargoid kill, Scout, Cyclops, Basilisk, Medusa & Hydra.  
