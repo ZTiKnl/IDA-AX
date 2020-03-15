@@ -45,7 +45,7 @@ def plugin_prefs(parent, cmdr, is_beta):
 
     frame = nb.Frame(parent)
 
-    plugin_label = nb.Label(frame, text="IDA-BGS AX plugin v0.30")
+    plugin_label = nb.Label(frame, text="IDA-BGS AX plugin v0.31")
     plugin_label.grid(padx=10, row=0, column=0, sticky=tk.W)
 
     HyperlinkLabel(frame, text='Visit website', background=nb.Label().cget('background'), url='https://github.com/ZTiKnl/IDA-AX', underline=True).grid(padx=10, row=0, column=1, sticky=tk.W)
@@ -77,7 +77,7 @@ def plugin_app(parent):
 
     label = tk.Label(parent, text="IDA AX:")
     statustext = 'S:' + str(this.kts.get()) + ' | C:' + str(this.ktc.get()) + ' | B:' + str(this.ktb.get()) + ' | M:' + str(this.ktm.get()) + ' | H:' + str(this.kth.get())
-    this.status = tk.Label(parent, text=statustext)
+    this.status = tk.Label(parent, text=statustext, anchor="w")
 
     return (label, this.status)
 
